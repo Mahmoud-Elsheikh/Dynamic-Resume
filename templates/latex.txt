@@ -1,0 +1,11 @@
+{% for project in Projects %}
+\runsubsection{ {{project.Title}} }
+\location{ {{project.StartDate}} }
+\vspace{\topsep}
+\begin{tightemize}
+{% for item in project.Items %}
+    \item {{ item }}
+{% endfor %}
+\end{tightemize}
+\sectionsep
+{% endfor %}
