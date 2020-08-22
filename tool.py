@@ -7,8 +7,7 @@ if __name__ == "__main__":
     env = Environment(
         loader=FileSystemLoader('templates'),
     )
-    #template.stream(name="Blank", day="Friday").dump("./output/output.txt")
-    latex= env.get_template('latex.txt')
-    print(latex.render(Projects=projects))
+    latex= env.get_template('Resume.xtx')
+    latex.stream(Projects=projects).dump("./output/output.xtx")
 
 
