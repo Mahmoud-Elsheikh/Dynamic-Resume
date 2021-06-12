@@ -37,5 +37,28 @@
         "Created a PHP webserver connecting to an external movie API",
         "Designed the index page to send sanitized queries to the API and return the results"
         ]
+    }, 
+    {
+        "Title":"Customer Review Score Classifier",
+        "StartDate":"Jan 2021",
+        "Items":
+        [
+        "Visualized a given dataset to identify trends and issues to be dealt with",
+        "Experimented with various text preprocessing techniques like tokenization and normalization",
+        "Converting the data into a vector space representation", 
+        "Classifying the data using Naive Bayes to generate a machine learning model"
+        ]
+    }, 
+    {
+        "Title":"Neural Net for Function Approximation",
+        "StartDate":"Sept 2020",
+        "Items":
+        [
+        "Created a feedforward neural network without using existing ML libraries",
+        "Created an improvement system based on backpropagation",
+        "Tested the performance for function approximation", 
+        "Improved the hyperparameters involved in order to increase the results"
+        ]
     }
+    
 ]

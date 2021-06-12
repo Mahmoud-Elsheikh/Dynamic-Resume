@@ -56,11 +56,10 @@
 
 \section{Skills}
 \subsection{Languages}
-Python \textbullet{} Javascript \textbullet{} C  \\
-\textbullet{} PHP \textbullet{} Java  \\[2mm]
-\subsection{Frameworks}
-Tensorflow \textbullet{} Keras \textbullet{} numpy  \\
-Scikit-Learn \textbullet{} Pandas \textbullet{} NLTK \\[2mm]
+Python \textbullet{} Javascript \textbullet{} C \textbullet{} PHP \\
+ Standard ML \textbullet{} Java  \\[2mm]
+\subsection{Web}
+React \textbullet{} NodeJS \textbullet{} Django \\[2mm]
 \subsection{Misc}
 Docker \textbullet{} Git 
 
