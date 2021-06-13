@@ -37,9 +37,9 @@ if __name__ == "__main__":
     #Commented Out Until CV Template Release
     print("For the UAE? Y/N")
     uae = binary_validator()
-    print(uae)
-    #print("Enter the Desired Format\n 1: Resume \n 2: CV")
-    #format_num = input_validator(1,3)
+    print("Two Pages? Y/N")
+    pagecount = binary_validator()
+
     latex= env.get_template('Resume.xtx')
 
     print("Choose projects to add:")
@@ -54,6 +54,6 @@ if __name__ == "__main__":
             pass
     filtered_input = [x for x in temp if 1 <= x <= len(projects) ]
     filtered_projects = [projects[x-1] for x in filtered_input]
-    latex.stream(uae=uae,Projects=filtered_projects).dump("./output/output.xtx")
+    latex.stream(pagecount=pagecount,uae=uae,Projects=filtered_projects).dump("./output/output.xtx")
     subprocess.run(["xelatex.exe","output.xtx"], cwd="./output")
 

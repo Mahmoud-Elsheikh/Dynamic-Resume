@@ -1,16 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy - One Page Two Column Resume
-% LaTeX Template
-% Version 1.2 (16/9/2014)
-%
-% Original author:
-% Debarghya Das (http://debarghyadas.com)
-%
-% Original repository:
-% https://github.com/deedydas/Deedy-Resume
-%
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-
 \documentclass[]{deedy-resume-openfont}
 \usepackage{fancyhdr}
  
@@ -19,27 +7,11 @@
  
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-%     TITLE NAME
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \namesection{Mahmoud}{Elsheikh}{ \urlstyle{same}
-\href{mailto:mahmoudelsheikh@hotmail.co.uk}{Email: mahmoudelsheikh@hotmail.co.uk}  | {%- if uae -%}   {Phone: +971 56 344 6780}  | {% endif %}  \href{https://github.com/Mahmoud-Elsheikh}{Github: Mahmoud-Elsheikh}
+\href{mailto:mahmoudelsheikh@hotmail.co.uk}{Email: mahmoudelsheikh@hotmail.co.uk}  | {%- if uae -%}    {Phone: +971 56 344 6780}  | {% endif %}  \href{https://github.com/Mahmoud-Elsheikh}{Github: Mahmoud-Elsheikh}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN ONE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{minipage}[t]{0.33\textwidth} 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Education} 
 \subsection{BSc Computer Science}
@@ -48,11 +20,15 @@
 \location{ Cum. GPA: 4.0 }
 \sectionsep
 
+{%- if uae -%}
 
+\section{Personal Details}
+Visa Status: Dependent \\
+Valid UAE Driver's Lisence  \\
+Location: Dubai \\
+\sectionsep
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{% endif %}
 
 \section{Skills}
 \subsection{Languages}
@@ -66,6 +42,83 @@ Docker \textbullet{} Git
 
 \sectionsep
 
+{%- if pagecount == false -%}
+\section{Interests}
+Automation \\
+Natural Language Processing \\
+Docker \\
+Testing \\
+Aritificial Intelligence\\
+\sectionsep
+
+\section{Hobbies}
+Linux Customization\\
+Robotics\\	
+Gaming\\
+Basic VFX\\
+Photo Editing\\
+Photography\\
+\sectionsep
+{% endif %}
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+\section{Projects and Coursework}
+\vspace{\topsep}
+
+{% for project in Projects %}
+\runsubsection{ {{project.Title}} }
+\location{ {{project.StartDate}} }
+\vspace{\topsep}
+\begin{tightemize}
+{% for item in project.Items %}
+    \item {{ item }}
+{% endfor %}
+\end{tightemize}
+\sectionsep
+{% endfor %}
+
+{%- if pagecount == false -%}
+\section{Volunteer Experience}
+\runsubsection{Heriot-Watt University Careers Department}
+\descript{Career Ambassador }
+\location{January 2018 - }
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Developed an Electron Application for the Information Kiosk with NodeJS
+\item Volunteered onsite at the Careers Fair
+\item Helping out students at the CV Drop-In Sessions
+\end{tightemize}
+\sectionsep
+
+\runsubsection{HW Tech Club}
+\descript{Technical Director }
+\location{September 2018 -}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Organize Weekly Workshops for the Students
+\item Manage Club finances and Budget requests
+\item Report to Club Advisors with new ideas 
+\item Prototype new concepts for the club to implement
+\end{tightemize}
+\sectionsep
+
+\section{Research}
+\runsubsection{Heriot Watt University }
+\descript{| Undergraduate Researcher}
+\location{Sept 2020 - April 2021}
+Researched an end to end System in aspect based sentiment analysis for summarizing laptop reviews using IOB-tagging and a NER approach. 
+\sectionsep
+\end{minipage}
+{% endif %}
+
+{%- if pagecount -%}
+\end{minipage} 
+\pagebreak
+
+\begin{minipage}[t]{0.33\textwidth} 
 \section{Interests}
 Automation \\
 Natural Language Processing \\
@@ -83,40 +136,9 @@ Photo Editing\\
 Photography\\
 \sectionsep
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \end{minipage} 
 \hfill
 \begin{minipage}[t]{0.66\textwidth} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Projects and Coursework
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Projects and Coursework}
-\vspace{\topsep}
-
-{% for project in Projects %}
-\runsubsection{ {{project.Title}} }
-\location{ {{project.StartDate}} }
-\vspace{\topsep}
-\begin{tightemize}
-{% for item in project.Items %}
-    \item {{ item }}
-{% endfor %}
-\end{tightemize}
-\sectionsep
-{% endfor %}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EXPERIENCE (Volunteering)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Volunteer Experience}
 \runsubsection{Heriot-Watt University Careers Department}
@@ -142,5 +164,12 @@ Photography\\
 \end{tightemize}
 \sectionsep
 
-\end{minipage} 
+\section{Research}
+\runsubsection{Heriot Watt University }
+\descript{| Undergraduate Researcher}
+\location{Sept 2020 - April 2021}
+Researched an end to end System in aspect based sentiment analysis for summarizing laptop reviews using IOB-tagging and a NER approach. 
+\sectionsep
+\end{minipage}
+{% endif %}
 \end{document}  \documentclass[]{article}
