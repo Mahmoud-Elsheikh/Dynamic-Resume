@@ -65,6 +65,21 @@ Photography\\
 \hfill
 \begin{minipage}[t]{0.66\textwidth} 
 
+\section{Work Experience}
+\runsubsection{Dubai Holiday Camps}
+\descript{Full Stack Developer}
+\location{Jan 2021- }
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Update the PHP backend to suit the new requirements.
+\item Maintain the MySQL database, creating new queries and tables.
+\item Modify the Front-End to better suit mobile devices.
+\item Manage and modify metadata for SEO optimizing.
+\item Creating new features to improve efficiency by reducing manual checking.
+\end{tightemize}
+\sectionsep
+
+
 \section{Projects and Coursework}
 \vspace{\topsep}
 
