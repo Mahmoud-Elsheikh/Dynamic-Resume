@@ -14,6 +14,17 @@ def input_validator(lower, upper):
         else:
             print("Incorrect Input")
 
+def binary_validator():
+    while True:
+        data=input("Y/N? ")
+        if data.lower() not in ("y", "n"):
+            print("Incorrect Input")
+        else:
+            if data.lower()=="y":
+                return True
+            else:
+                return False
+
 if __name__ == "__main__":
     with open('projects.json', 'r') as file:
         data=file.read()
@@ -24,8 +35,11 @@ if __name__ == "__main__":
 
     print("Dynamic CV")
     #Commented Out Until CV Template Release
+    print("For the UAE? Y/N")
+    uae = binary_validator()
+    print(uae)
     #print("Enter the Desired Format\n 1: Resume \n 2: CV")
-    #format_num = input_validator(1,2)
+    #format_num = input_validator(1,3)
     latex= env.get_template('Resume.xtx')
 
     print("Choose projects to add:")
@@ -40,6 +54,6 @@ if __name__ == "__main__":
             pass
     filtered_input = [x for x in temp if 1 <= x <= len(projects) ]
     filtered_projects = [projects[x-1] for x in filtered_input]
-    latex.stream(Projects=filtered_projects).dump("./output/output.xtx")
+    latex.stream(uae=uae,Projects=filtered_projects).dump("./output/output.xtx")
     subprocess.run(["xelatex.exe","output.xtx"], cwd="./output")
 

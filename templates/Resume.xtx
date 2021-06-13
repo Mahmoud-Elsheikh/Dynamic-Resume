@@ -20,12 +20,12 @@
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+% 
 %     TITLE NAME
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \namesection{Mahmoud}{Elsheikh}{ \urlstyle{same}
-\href{mailto:mahmoudelsheikh@hotmail.co.uk}{Email: mahmoudelsheikh@hotmail.co.uk}  | \href{https://github.com/Mahmoud-Elsheikh}{Github: Mahmoud-Elsheikh}
+\href{mailto:mahmoudelsheikh@hotmail.co.uk}{Email: mahmoudelsheikh@hotmail.co.uk}  | {%- if uae -%}   {Phone: +971 56 344 6780}  | {% endif %}  \href{https://github.com/Mahmoud-Elsheikh}{Github: Mahmoud-Elsheikh}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
