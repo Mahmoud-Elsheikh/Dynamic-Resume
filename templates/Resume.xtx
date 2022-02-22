@@ -1,7 +1,7 @@
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
 \documentclass[]{deedy-resume-openfont}
 \usepackage{fancyhdr}
- 
+
 \pagestyle{fancy}
 \fancyhf{}
  
@@ -19,6 +19,15 @@
 \location{Graduation: 2021 | Dubai }
 \location{ Cum. GPA: 4.0 }
 \sectionsep
+
+{%- if phd -%}
+
+\subsection{PhD Computer Science}
+\descript{Heriot Watt University}
+\location{Graduation: 2025 | Dubai }
+\sectionsep
+
+{% endif %}
 
 {%- if uae -%}
 
@@ -114,6 +123,17 @@ Photography\\
 \location{Sept 2020 - April 2021}
 Researched an end to end System in aspect based sentiment analysis for summarizing laptop reviews using IOB-tagging and a NER approach. 
 \sectionsep
+
+{%- if phd -%}
+
+\section{Publications} 
+\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+
+{% endif %}
+
 \end{minipage}
 {% endif %}
 

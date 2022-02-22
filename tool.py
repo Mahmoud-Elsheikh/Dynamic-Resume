@@ -55,5 +55,5 @@ if __name__ == "__main__":
     filtered_input = [x for x in temp if 1 <= x <= len(projects) ]
     filtered_projects = [projects[x-1] for x in filtered_input]
     latex.stream(pagecount=pagecount,uae=uae,Projects=filtered_projects).dump("./output/output.xtx")
-    subprocess.run(["xelatex.exe","output.xtx"], cwd="./output")
+    subprocess.run(["xelatex","output.xtx"], cwd="./output")
 
