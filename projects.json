@@ -45,8 +45,8 @@
         [
         "Visualized a given dataset to identify trends and issues to be dealt with",
         "Experimented with various text preprocessing techniques like tokenization and normalization",
-        "Converting the data into a vector space representation", 
-        "Classifying the data using Naive Bayes to generate a machine learning model"
+        "Converted the data into a vector space representation", 
+        "Classified the data using Naive Bayes to generate a machine learning model"
         ]
     }, 
     {
