@@ -39,6 +39,8 @@ if __name__ == "__main__":
     uae = binary_validator()
     print("Two Pages? Y/N")
     pagecount = binary_validator()
+    print("PhD? Y/N")
+    phd = binary_validator()
 
     latex= env.get_template('Resume.xtx')
 
@@ -54,6 +56,8 @@ if __name__ == "__main__":
             pass
     filtered_input = [x for x in temp if 1 <= x <= len(projects) ]
     filtered_projects = [projects[x-1] for x in filtered_input]
-    latex.stream(pagecount=pagecount,uae=uae,Projects=filtered_projects).dump("./output/output.xtx")
+    latex.stream(pagecount=pagecount,uae=uae, phd= phd, Projects=filtered_projects).dump("./output/output.xtx")
+    subprocess.run(["xelatex","output.xtx"], cwd="./output")
+    subprocess.run(["bibtex","output.aux"], cwd="./output")
     subprocess.run(["xelatex","output.xtx"], cwd="./output")
 

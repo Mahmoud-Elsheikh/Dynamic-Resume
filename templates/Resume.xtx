@@ -2,6 +2,7 @@
 \documentclass[]{deedy-resume-openfont}
 \usepackage{fancyhdr}
 
+\usepackage{import}
 \pagestyle{fancy}
 \fancyhf{}
  
@@ -39,55 +40,19 @@ Location: Dubai \\
 
 {% endif %}
 
-\section{Skills}
-\subsection{Languages}
-Python \textbullet{} Javascript \textbullet{} C  \\
-\textbullet{} PHP \textbullet{} Java  \\[2mm]
-\subsection{Frameworks}
-Tensorflow \textbullet{} Keras \textbullet{} numpy  \\
-Scikit-Learn \textbullet{} Pandas \textbullet{} NLTK \\[2mm]
-\subsection{Misc}
-Docker \textbullet{} Git 
+\import{../templates/components/}{skills.xtx}
 
 \sectionsep
 
 {%- if pagecount == false -%}
-\section{Interests}
-Automation \\
-Natural Language Processing \\
-Docker \\
-Testing \\
-Aritificial Intelligence\\
-\sectionsep
-
-\section{Hobbies}
-Linux Customization\\
-Robotics\\	
-Gaming\\
-Basic VFX\\
-Photo Editing\\
-Photography\\
-\sectionsep
+\import{../templates/components/}{interests.xtx}
 {% endif %}
 
 \end{minipage} 
 \hfill
 \begin{minipage}[t]{0.66\textwidth} 
 
-\section{Work Experience}
-\runsubsection{Dubai Holiday Camps}
-\descript{Full Stack Developer}
-\location{Jan 2021- }
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Update the PHP backend to suit the new requirements.
-\item Maintain the MySQL database, creating new queries and tables.
-\item Modify the Front-End to better suit mobile devices.
-\item Manage and modify metadata for SEO optimizing.
-\item Creating new features to improve efficiency by reducing manual checking.
-\end{tightemize}
-\sectionsep
-
+\import{../templates/components/}{work.xtx}
 
 \section{Projects and Coursework}
 \vspace{\topsep}
@@ -105,33 +70,11 @@ Photography\\
 {% endfor %}
 
 {%- if pagecount == false -%}
-\section{Volunteer Experience}
-\runsubsection{Heriot-Watt University Careers Department}
-\descript{Career Ambassador }
-\location{January 2018 - }
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Developed an Electron Application for the Information Kiosk with NodeJS
-\item Volunteered onsite at the Careers Fair
-\item Helping out students at the CV Drop-In Sessions
-\end{tightemize}
-\sectionsep
 
-\section{Research}
-\runsubsection{Heriot Watt University }
-\descript{| Undergraduate Researcher}
-\location{Sept 2020 - April 2021}
-Researched an end to end System in aspect based sentiment analysis for summarizing laptop reviews using IOB-tagging and a NER approach. 
-\sectionsep
+\import{../templates/components/}{volunteer.xtx}
 
 {%- if phd -%}
-
-\section{Publications} 
-\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
-\bibliographystyle{abbrv}
-\bibliography{publications}
-\nocite{*}
-
+\import{../templates/components/}{research.xtx}
 {% endif %}
 
 \end{minipage}
@@ -142,42 +85,18 @@ Researched an end to end System in aspect based sentiment analysis for summarizi
 \pagebreak
 
 \begin{minipage}[t]{0.33\textwidth} 
-\section{Interests}
-Automation \\
-Natural Language Processing \\
-Docker \\
-Testing \\
-Aritificial Intelligence\\
-\sectionsep
 
-\section{Hobbies}
-Linux Customization\\
-Robotics\\	
-Gaming\\
-Basic VFX\\
-Photo Editing\\
-Photography\\
-\sectionsep
+\import{../templates/components/}{interests.xtx}
 
 \end{minipage} 
 \hfill
 \begin{minipage}[t]{0.66\textwidth} 
 
-\section{Volunteer Experience}
-\runsubsection{Heriot-Watt University Careers Department}
-\descript{Career Ambassador }
-\location{January 2018 - }
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Developed an Electron Application for the Information Kiosk with NodeJS
-\item Volunteered onsite at the Careers Fair
-\item Helping out students at the CV Drop-In Sessions
-\end{tightemize}
-\sectionsep
+\import{../templates/components/}{volunteer.xtx}
 
 \runsubsection{HW Tech Club}
 \descript{Technical Director }
-\location{September 2018 -}
+\location{September 2018 - May 2021}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
 \item Organize Weekly Workshops for the Students
@@ -187,12 +106,9 @@ Photography\\
 \end{tightemize}
 \sectionsep
 
-\section{Research}
-\runsubsection{Heriot Watt University }
-\descript{| Undergraduate Researcher}
-\location{Sept 2020 - April 2021}
-Researched an end to end System in aspect based sentiment analysis for summarizing laptop reviews using IOB-tagging and a NER approach. 
-\sectionsep
-\end{minipage}
+{%- if phd -%}
+\import{../templates/components/}{research.xtx}
+{% endif %}
+
 {% endif %}
 \end{document}  \documentclass[]{article}

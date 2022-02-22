@@ -1,0 +1,7 @@
+\vspace{\topsep}
+\section{Publications} 
+%\vspace{\topsep}
+\renewcommand\refname{\vskip -0.5cm} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+\bibliography{../templates/components/publications.bib}
+\nocite{*}
