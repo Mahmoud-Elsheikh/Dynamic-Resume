@@ -59,6 +59,37 @@
         "Tested the performance for function approximation", 
         "Improved the hyperparameters involved in order to increase the results"
         ]
+    },
+    {
+        "Title":"Aspect Based Sentiment Analysis for Reviews",
+        "StartDate":"Sept 2020",
+        "Items":
+        [
+        "Parsed the SemEval 2014 Laptop Review dataset",
+        "Created a custom IOB-like tagging scheme for the dataset to extract aspects and their sentiments", 
+        "Tested various transformer variants such as ELECTRA and BERT for sequence labeling",
+        "Improved upon the baseline traditional model tested by 20%"
+        ]
+    },
+    {
+        "Title":"Card Database",
+        "StartDate":"Feb 2022",
+        "Items":
+        [
+        "Created a full stack web application using Flask and React.",
+        "Implemented a responsive interface that can allow users to perform CRUD operations.",
+        "Integrated an existing wiki API for further information and context."
+        ]
+    },
+    {
+        "Title":"Deep Learning Benchmarker",
+        "StartDate":"June 2022",
+        "Items":
+        [
+        "Created an end to end application for performance testing different ML models in pytorch.",
+        "Compared the performance of BERT, GPT, and T5 on a fixed task.",
+        "Analysed the results and created a summary report."
+        ]
     }
     
 ]

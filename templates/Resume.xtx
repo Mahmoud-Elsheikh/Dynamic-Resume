@@ -18,7 +18,7 @@
 \subsection{BSc Computer Science}
 \descript{Heriot Watt University}
 \location{Graduation: 2021 | Dubai }
-\location{ Cum. GPA: 4.0 }
+\location{ Cum. GPA: 4.0 } % First Class Honors 
 \sectionsep
 
 {%- if phd -%}
@@ -109,6 +109,6 @@ Location: Dubai \\
 {%- if phd -%}
 \import{../templates/components/}{research.xtx}
 {% endif %}
-
+\end{minipage} 
 {% endif %}
 \end{document}  \documentclass[]{article}
